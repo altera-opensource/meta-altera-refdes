@@ -1,11 +1,8 @@
-DEPENDS += "u-boot-tools virtual/kernel"
-DEPENDS += "coreutils-native"
-DEPENDS_append_agilex += "arm-trusted-firmware bash"
-DEPENDS_append_stratix10 += "arm-trusted-firmware bash"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+
+DEPENDS += "arm-trusted-firmware bash coreutils-native u-boot-tools virtual/kernel"
 
 inherit deploy
-
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 SRC_URI_append_arria10 += "\
 		file://socfpga_arria10_socdk_nand.dtb \
