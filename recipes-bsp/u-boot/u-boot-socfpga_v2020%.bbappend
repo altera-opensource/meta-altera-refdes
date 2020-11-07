@@ -6,9 +6,6 @@ DEPENDS_append_stratix10 += "arm-trusted-firmware bash"
 
 inherit deploy
 
-UBOOT_CONFIG[agilex-socdk-qspi-atf] = "socfpga_agilex_qspi_atf_defconfig"
-UBOOT_CONFIG[stratix10-socdk-qspi-atf] = "socfpga_stratix10_qspi_atf_defconfig"
-
 SRC_URI_append_arria10 += "\
 		file://socfpga_arria10_socdk_nand.dtb \
 		file://socfpga_arria10_socdk_qspi.dtb \
